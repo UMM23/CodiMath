@@ -9,18 +9,20 @@ body{
 }
 
 nav{
+    display:flex;
+    backdrop-filter: blur(8px);
     color:transparent;
     align-content: center;
-    padding-left: 425px;
+    padding-left: 350px;
     padding-top:10px;
 }
 nav:hover{
     align-items:center;
 }
 nav ul{
-
+    backdrop-filter:inherit;
     list-style-type: none;
-    color: rgba(189, 183, 107, 0.529);
+    color: rgba(72, 70, 111, 0.362);
     border-radius: 20px;
     display:flex;
     align-items: center;

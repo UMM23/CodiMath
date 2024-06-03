@@ -2,7 +2,70 @@
 {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+section{
+  position: fixed;
+  width: 100%;
+  height:100vh;
+  background:rgb(23, 93, 79);
+  overflow:hidden;
+}
+section .wave{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:100px;
+  background:url(wave.png);
+  background-size: 1000px 100px;
+}
+section .wave.wave1{
+  animation: animate 30s linear infinite;
+  z-index:1000;
+  opacity:1;
+  animation-delay:0s;
+  bottom:0;
+}
+section .wave.wave2{
+  animation: animate2 15s linear infinite;
+  z-index: index 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+section .wave.wave3{
+  animation: animate 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 1px;
+}
+section .wave.wave4{
+  animation: animate2 15s linear infinite;
+  z-index: index 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+@keyframes animate{
+  0%
+  {
+    background-position-x:0;
+  }
+  100%
+  {
+    background-position-x:1000px;
+  }
+}
+  @keyframes animate2{
+    0%
+    {
+      background-position-x:0;
+    }
+    100%
+    {
+      background-position-x: -1000px;
+    }
 }
 body{
     background-color: rgb(23, 42, 93);
@@ -16,12 +79,13 @@ body{
   .content{
     width: 100%;
     position:absolute;
-    color:white;
+    color:rgb(0, 0, 0);
     top:45%;
     transform: translateY(-50%);
     text-align:center;
   }
   .content h1{
+    color: black;
     padding-top: 800px;
     margin-top:10px;
     font-size:50px;
@@ -31,9 +95,11 @@ body{
   .content p{
     margin-top: 50px;
     font-size:20px;
-    font-family:"Exo", sans-serif;
+    color:black;
+    font-family: "Exo", sans-serif;
   }
   .content h3{
+    color:black;
     margin-top:70px;
     font-family:"Exo", sans-serif;
     text-align: left;
@@ -67,43 +133,4 @@ body{
   button:hover{
     color:white;
   }
-.container{
-    position:relative;
-    width:100%;
-    height:100vh;
-    overflow:hidden;
-}
-.bubbles{
-    position:relative;
-    display:flex;
-}
-.bubbles span{
-    position:inherit;
-    width:30px;
-    height:30px;
-    background:rgb(52, 207, 207);
-    margin:0 4px;
-    border-radius:50px;
-    box-shadow:0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
-    animation:animate 15s linear infinite;
-    animation-duration: calc(125s / var(--i));    
-}
-.bubble span::nth-child(even)
-{
-    background: #ff2d75;
-    border-radius:50px;
-    box-shadow:0 0 0 10px #ff2d7544, 
-    0 0 50px #ff2d75, 
-    0 0 100px #ff2d75;
-    animation:animate 15s linear infinite; 
-}
-@keyframes animate{
-    0%
-    {
-        transform:translateY(100vh) scale(0);
-    }
-    100%
-    {
-        transform:translateY(-10vh) scale(1);
-    }
-}
+
