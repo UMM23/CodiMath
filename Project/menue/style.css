@@ -15,6 +15,7 @@ nav{
     align-content: center;
     padding-left: 350px;
     padding-top:10px;
+    font-size:20px;
 }
 nav:hover{
     align-items:center;
