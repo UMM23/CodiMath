@@ -11,51 +11,134 @@
     <nav>
         <ul class = "uniquifier">
         <img src="../logo.png" alt="Logo" width="100px" height="30px" class="justify">
-        <li><a href="../index.html">Menue</a></li>
+        <li><a href="../index.html">Menu</a></li>
         <li><a href="/Maths/Math basics.html">Maths</a></li>
         <li><a href="Programming basics.html">Programming</a></li>
         <li><a href="Tests/Tests.html">Tests</a></li>
         <li><a href="../register.html">Register</a></li>
         </ul>
     </nav>
-        <div class="container">
-            <div class = "card__container">
-                <article class="card__article">
-                    <img src="If...else..nobg.png" alt="img" class="card__img">
+    <main> <section class="content-section">
+        <h2>I. 'If' ladder</h2>
+        <details>
+            <summary>'If' statement</summary>
+            <ul>
+                <li>
+                    The if statement evaluates a condition (an expression that results in a boolean value).
+                </li>
+                <li>
+                    If the condition is true, the code block inside the if statement is executed.
+                </li>
+                <li>
+                    If the condition is false, the code block is skipped.
+                </li>
+            </ul>
+            </details>
+            <details>
+            <summary>'Else' Statement:</summary>
+            <ul>
+                <li>
+                    The <b>'else'</b> statement can be paired with an <b>'if'</b> statement to provide an alternative code block that executes when the <b>'if'</b> condition is false.
+                </li>
+                <li>
+                    Only one of the code blocks (either <b>'if' or 'else'</b>) will execute based on the condition.
+                </li>
+            </ul>
+            </details>
+            <details>
+            <summary>Syntax</summary>
+            <ul>
+                <li><code>if (condition) { <br>
+                    // Code to execute if the condition is true<br>
+                } else {<br>
+                    // Code to execute if the condition is false<br>
+                }</code></li>
+            </ul>
 
-                    <div class="card__data">
-                        <h3 class="card__title">If Else</h3>
-                        <span class="card__price">111</span>
-                    </div>
-                    <img src="if..else.png" alt="image" class="card__bg">
-                    <a href="If...else.html" class="card__button">
-                        View More<i class="ri-arrow-right-line"></i> 
-                    </a>
-                </article>
-                <article class="card__article">
-                    <img src="While..nobg.png" alt="img" class="card__img">
+        </details>
+        <details>
+            <summary>Example and explanation</summary>
+            <ul>
+                <li><b>Example </b></li>
+                <code>int number = 10;<br>
 
-                    <div class="card__data">
-                        <h3 class="card__title">Do While</h3>
-                        <span class="card__price">111</span>
-                    </div>
-                    <img src="Do...while.png" alt="image" class="card__bg">
-                    <a href="Do...While.html" class="card__button">
-                        View More<i class="ri-arrow-right-line"></i> 
-                    </a>
-                </article>
-                <article class="card__article">
-                    <img src="For..nbg.png" alt="img" class="card__img">
+                    if (number > 5) {<br>
+                        std::cout << "The number is greater than 5." << std::endl;<br>
+                    } else {<br>
+                        std::cout << "The number is 5 or less." << std::endl;<br>
+                    }</code>
+                <li><b>Explanation</b></li>
+                If number is greater than 5, the program prints "The number is greater than 5."<br>
+                Otherwise, it prints "The number is 5 or less."
+            </ul>
+        </details>
+        <main> <section class="content-section">
+            <h2>I. 'Else if' ladder</h2>
+            <details>
+                <summary>Syntax</summary>
+                <ul>
+                    <li>
+                        You can chain multiple conditions using else if for more complex decision-making.<br>
+                    <code>if (condition1) {<br>
+                        // Code if condition1 is true<br>
+                    } else if (condition2) {<br>
+                        // Code if condition1 is false and condition2 is true<br>
+                    } else {<br>
+                        // Code if both condition1 and condition2 are false<br>
+                    }<br>
+                    </code></li>
+                </ul>
+    
+    
+            </details>
+            <details>
+                <summary>Example and explanation</summary>
+                <ul>
+                    <li><b>Example </b></li>
+                    <code>int number = 10;<br>
 
-                    <div class="card__data">
-                        <h3 class="card__title">For</h3>
-                        <span class="card__price">111</span>
-                    </div>
-                    <img src="For.png" alt="image" class="card__bg">
-                    <a href="For.html" class="card__button">
-                        View More<i class="ri-arrow-right-line"></i> 
-                    </a>
-                </article>
-            </div>
-        </div>
+                        if (number > 10) {<br>
+                            std::cout << "The number is greater than 10." << std::endl;<br>
+                        } else if (number == 10) {<br>
+                            std::cout << "The number is exactly 10." << std::endl;<br>
+                        } else {<br>
+                            std::cout << "The number is less than 10." << std::endl;<br>
+                        }</code>
+                    <li><b>Explanation</b></li>
+                    Here, the program checks if number is greater than 10, exactly 10, or less than 10, and executes the corresponding code block.
+                </ul>
+            </details>
+        </main>
+        <h2>II. 'While' loop</h2>
+            <details>
+                <summary>Syntax</summary>
+                <ul>
+                    <li>
+                        In C++, the while loop is a control structure used to repeatedly execute a block of code as long as a specified condition remains true. It is useful when you need to perform a task multiple times but do not know in advance how many iterations will be needed.
+                    <code>while (condition) {<br>
+                        // Code to execute as long as the condition is true<br>
+                    }<br>
+                    <br>
+                    </code></li>
+                </ul>
+    
+    
+            </details>
+            <details>
+                <summary>Example and explanation</summary>
+                <ul>
+                    <li><b>Example </b></li>
+                    <code>int number = 10;<br>
+
+                        if (number > 10) {<br>
+                            std::cout << "The number is greater than 10." << std::endl;<br>
+                        } else if (number == 10) {<br>
+                            std::cout << "The number is exactly 10." << std::endl;<br>
+                        } else {<br>
+                            std::cout << "The number is less than 10." << std::endl;<br>
+                        }</code>
+                    <li><b>Explanation</b></li>
+                    Here, the program checks if number is greater than 10, exactly 10, or less than 10, and executes the corresponding code block.
+                </ul>
+            </details>
 </body>
