@@ -7,7 +7,7 @@ section{
   position: fixed;
   width: 100%;
   height:100vh;
-  background:rgb(23, 42, 93);
+  background:rgb(80, 133, 164);
   overflow:hidden;
 }
 section .wave{
@@ -68,7 +68,7 @@ section .wave.wave4{
     }
 }
 body{
-    background-color: rgb(23, 42, 93);
+    background-color: rgb(72, 120, 156);
 }
 .uniquifier {
     font-family: "Exo", sans-serif;

@@ -78,10 +78,25 @@ main {
 .content-section {
     margin-bottom: 20px;
 }
+h1{
+    color:white;
+    font-family:"Exo", sans-serif;
+    text-align: center;
+}
 h2 {
     color: #e8e0e0;
     font-family: "Exo", sans-serif;
     margin-top: 0;
+}
+h4{
+    color:white;
+    font-family:"Exo", sans-serif;
+    padding-left:10px;
+    font-weight:lighter;
+}
+code{
+    color:white;
+    padding-left: 20px;
 }
 details {
     background-color: rgb(25, 54, 129);
