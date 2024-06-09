@@ -7,6 +7,19 @@
 body{
     background-color: rgb(23, 42, 93);
 }
+nav a ul li, .dropbtn {
+    color: white;
+    transition: transform 0,3; background-color: rgba(0, 0, 0, 0.614) 0,3s;
+}
+nav{
+    display:flex;
+    backdrop-filter: blur(8px);
+    color:transparent;
+    align-content: center;
+    padding-left: 350px;
+    padding-top:10px;
+    font-size:20px;
+}
 nav:hover{
     align-items:center;
 }
@@ -49,7 +62,7 @@ nav a:hover {
     transition: color 0.3s ease;
 }
 
-nav a ul li, .dropbtn {
+nav a {
     color: white;
     transition: transform 0,3; background-color: rgba(0, 0, 0, 0.614) 0,3s;
 }
@@ -59,25 +72,10 @@ nav a ul li, .dropbtn {
     font-weight: 500;
     font-style: normal;
   }
-  nav{
-    display:flex;
-    backdrop-filter: blur(8px);
-    color:transparent;
-    align-content: center;
-    padding-left: 350px;
-    padding-top:10px;
-    font-size:20px;
-}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-header {
-    background: linear-gradient(to right, #1e0878, #262457);
-    color: white;
-    padding: 20;
-    text-align: center;
 }
 main {
     padding: 20px;
@@ -119,7 +117,7 @@ ul {
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 20px;
 }
 
 nav ul li {
@@ -154,4 +152,23 @@ nav ul .dropdown-content a:hover {
 
 nav ul .dropdown:hover .dropdown-content {
     display: block;
+}
+.box {
+    background-color: rgb(235, 233, 233);
+    color: black;
+    width: fit-content;
+    border: 10px solid rgb(0, 28, 128);
+    padding: 10px;
+    margin: 10px;
+  }
+.box1 {
+    background-color: rgb(235, 233, 233);
+    color: black;
+    width: fit-content;
+    border: 10px solid rgb(0, 28, 128);
+    padding: 20px;
+    margin: 0px;
+}
+ol {
+    margin: 5px;
 }

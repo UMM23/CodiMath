@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <title>CodiMath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,900;1,900&family=Exo:ital,wght@0,484;1,484&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="website icon" type="png" href="logo.png">
     <link rel="stylesheet" href="styleMaths7.css">
 </head>
@@ -23,9 +26,6 @@
         <li><a href="../register.html">Register</a></li>
         </ul>
     </nav>
-    <header>
-        <h1>Theory</h1>
-    </header>
     <main>
         <section class="content-section">
             <h2>I. Variables and constants. Parameters. Rational expression</h2>
@@ -35,8 +35,6 @@
                     <li>Definition - A letter that takes on different values.</li>
                     <li>Way of notation - Usually variable quantities are notated with the last letters of the Latin alphabet. For example: x, y, z. </li>
                 </ul>
-                
-                
             </details>
             <details>
                 <summary>Constant quantities (constants and parameters)</summary>
@@ -59,34 +57,131 @@
                         expression</b> - If a rational expression has a division by a variable (Fig. 2).</li>
                     <img src="figure2.png" alt="Fractional rational expression" class="figure">
                     <li><b>Numeric value of an expression</b> - When letters are replaced by given rational numbers.<br>
-                    <b>For example: </b>A = 2x2 - a. For x = - 1, a = - 3, the numerical value of the expression A is A = 2.(- 1)2 - (- 3) = 2.1 + 3 = 2 + 3 = 5.</li>
-                    <li></li>
+                    <b>For example: </b>A = 2x<sup>2</sup> - a. For x = - 1, a = - 3, the numerical value of the expression A is A = 2.(- 1)<sup>2</sup> - (- 3) = 2.1 + 3 = 2 + 3 = 5.</li>
+                    <li><b>Allowable values (AU)</b> - The values that the lettered quantities can take. <br>
+                    <b>For example</b>: the AU of the expression in Fig. 1 is any x and any a ≠ ±1, and that of Fig. 2 is any x ≠ 0 and any a.</li> 
                 </ul>
             </details>
         </section>
         <section class="content-section">
-            <h2>II. Едночлени</h2>
+            <h2>II. Monomial</h2>
             <details>
-                <summary>Определение</summary>
-                <p>Content for Определение</p>
+                <summary>Definition</summary>
+                <ul>
+                    <li>An integer rational expression that is a product of numbers written with letters and numbers.</li>
+                </ul>
             </details>
             <details>
-                <summary>Нормален (стандартен) вид на едночлен</summary>
-                <p>Content for Нормален (стандартен) вид на едночлен</p>
+                <summary>Normal (standard) form of the monomial</summary>
+                <ul>
+                    <p><b>The monosyllable is represented</b> so that:</p>
+                    <li>there is only one number in front of the letters;</li>
+                    <li>the product of equal letters is written as a power.</li>
+                    <div class="box"><b>For example: </b>given the ones complement A = 2xy<sup>2</sup> and B = - 5x.y<sup>2</sup>.3<sup>2</sup>.y<sup>3</sup>.4x<sup>3</sup>. <br>
+                        The monomial A is in normal form because there is only one number and each letter occurs only once.<br>
+                        The monomial B is not in normal form because the action between the numbers is not performed, and the same letters occur in more than one place.</div>
+                </ul>
             </details>
             <details>
-                <summary>Коефициент на едночлен</summary>
-                <p>Content for Коефициент на едночлен</p>
+                <summary>Coefficient of a monomial</summary>
+                <ul>
+                    <li><b>Definition</b> - The numerical multiplier (may contain numbers and parameters) of each term written in normal form (Fig. 3).</li>
+                    <img src="figure3.png" alt="Coefficient of a monomial" class="figure">
+                </ul>
             </details>
             <details>
-                <summary>Степен на едночлен</summary>
-                <p>Content for Степен на едночлен</p>
+                <summary>Power of a monomial</summary>
+                <ul>
+                    <li><b>Definition</b> – The sum of the exponents of the variables involved in the normal form of the monomial (Fig. 3).</li>
+                    <img src="figure3.png" alt="Power of a monomial" class="figure">
+                </ul>
             </details>
             <details>
-                <summary>Подобни едночлени</summary>
-                <p>Content for Подобни едночлени</p>
+                <summary>Similar monomials</summary>
+                <ul>
+                    <li><b>Definition</b> – Monomials that have the same normal form, or differ only in their coefficients.</li>
+                    <li><b>For example: </b>– 2xy and 3xy.</li>
+                </ul>
+            </details>
+            <div class="box1"><b>Notes:</b><br>
+                <ol>
+                    <li>Equal Monomials – The monomials 4ax and 4ax are equal because they are similar and have equal coefficients.</li>
+                    <li>
+                        Opposite Monomials – The monomials (– 3by<sup>2</sup>) and 3by<sup>2</sup> are opposites because they are similar and their factors are opposite numbers.</li>
+                </ol></div>
+            <details>
+                <summary>Addition and subtraction of similar monomials</summary>
+                <ul>
+                    <li><b>Rule for adding and subtracting similar monomials:</b><br>
+                    <ol>
+                        <li>We add or subtract the coefficients of the monomials.</li>
+                        <li>We write the variables unchanged.</li>   
+                    </ol></li>
+                    <p><b>For example: </b>If we have similar monomials – 2xy and – 3xy and need to add them, then: <br>
+                        – 2xy – 3xy = – 5xy.</p>
+                </ul>
+            </details>
+            <details>
+                <summary>Multiplication of monomials</summary>
+                <ul>
+                    <li>We write the monomials one after the other and bring the resulting monomial into normal form.<br>
+                    <b>For example: </b>– 2x<sup>2</sup> y<sup>3</sup> . (– 3xy) = + 2.3.x<sup>2</sup>.x.y<sup>3</sup>.y = 6x<sup>3</sup>y<sup>4</sup>.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Exponentiation of monomials</summary>
+                <ul>
+                    <li>We exponentiate a monomial by exponentiating each of its factors.<br>
+                    <b>For example: </b> (– 2x<sup>2</sup> y<sup>3</sup>)<sup>4</sup> = (– 2)<sup>4</sup>.(x<sup>2</sup>)<sup>4</sup>.(y<sup>3</sup>)<sup>4</sup> = 16x<sup>8</sup>y<sup>12</sup>.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Division of monomials</summary>
+                <ul>
+                    <li>Rule: <br></li>
+                    <ol>
+                    <li>We divide their coefficients and write the resulting number in the first place.</li>
+                    <li>We divide the letter part as degrees with equal bases are divided. <br>
+                    <b>For example: </b>25a<sup>2</sup>x<sup>2</sup>y<sup>3</sup> : 5axy<sup>2</sup> = 5axy</li>
+                    </ol>
+                </ul>
             </details>
         </section>
+        <section class="content-section">
+            <h2>III. Polynomials</h2>
+            <details>
+                <summary>Definition</summary>
+                <ul>
+                    <li>An algebraic sum of monomials is called a polynomial.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Normal form of a polynomial</summary>
+                <ul>
+                    <li>The polynomial is represented as: <br>
+                        <ul>
+                        <li>all monomials in it are in normal form;</li>
+                        <li>there are no similar monomials between monomials.</li>
+                    </ul></li>
+                    <div class="box"><b>For example: </b>given the polynomials A = 5x<sup>3</sup> – 2x + 4 and B = −5y<sup>3</sup> + y<sup>2</sup> + 6y<sup>3</sup> – 1. <br>
+                        The polynomial A is in normal form because all terms are in normal form and there are no similar monomials.<br>
+                        The polynomial B is not in normal form because two of its terms (−5y<sup>3</sup> and 6y<sup>3</sup>) are similar monomials.</div>
+                </ul>
+            </details>
+            <details>
+                <summary>Coefficients of a polynomial</summary>
+                <ul>
+                    <li><b>Definition</b> – The coefficients of the terms of the polynomial in normal form.</li>
+                    <li><b>For example: </b>The polynomial C = 5x<sup>3</sup> – 2x + 4 is in normal form and is a sum of the monomials 5x<sup>3</sup> , – 2x, 4 and therefore has coefficients 5, – 2, 4.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Degree of a polynomial</summary>
+                <ul>
+                    <li><b>Definition</b> – The highest of the degrees of the monomials in the normal form of the polynomial.</li>
+                    <li><b>For example: </b>x<sup>2</sup> + 2x – 3 is quadratic because x<sup>2</sup> is the highest term (2).</li>
+                </ul>
+            </details>
     </main>
 </body>
 </html>
