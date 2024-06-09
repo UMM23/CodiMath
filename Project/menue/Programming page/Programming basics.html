@@ -4,14 +4,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,900;1,900&family=Exo:ital,wght@0,484;1,484&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="website icon" type="png" href="logo.png">
+    <link rel="website icon" type="png" href="../logo.png">
     <link rel="stylesheet" href="styleProgramming.css">
 </head>
 <body>
     <nav>
         <ul class = "uniquifier">
         <img src="../logo.png" alt="Logo" width="100px" height="30px" class="justify">
-        <li><a href="../index.html">Menue</a></li>
+        <li><a href="../index.html">Menu</a></li>
         <li class="dropdown">
             <a href="#" class="dropbtn">Maths</a>
             <div class="dropdown-content">
@@ -20,11 +20,20 @@
                 <a href="../Maths/Math basics 8.html">8th grade</a>
             </div>
         </li>
-        <li><a href="../Programming page/Programming basics.html">Programming</a></li>
-        <li><a href="../Tests/Tests.html">Tests</a></li>
+        <li><a href="../Programming page/Programming basics.html">C++</a></li>
+        <li class="dropdown">
+            <a href="*" class="dropbth">Tests</a>
+            <div class="dropdown-content">
+                <a href="../Tests/Maths6thtest.html">Maths 6th grade</a>
+                <a href="../Tests/Maths7thtests.html">Maths 7th grade</a>
+                <a href="../Tests/Maths8thtests.html">Maths 8th grade</a>
+                <a href="../Tests/C++test.html">C++</a>
+            </div>
+            </li>
         <li><a href="../register.html">Register</a></li>
         </ul>
     </nav>
+    <h1>Theory</h1>
     <main> <section class="content-section">
         <h2>I. 'If' ladder</h2>
         <details>
@@ -121,7 +130,7 @@
                 <summary>Syntax</summary>
                 <ul>
                     <li>
-                        In C++, the while loop is a control structure used to repeatedly execute a block of code as long as a specified condition remains true. It is useful when you need to perform a task multiple times but do not know in advance how many iterations will be needed.
+                        In C++, the <b>'while'</b> loop is a control structure used to repeatedly execute a block of code as long as a specified condition remains true. It is useful when you need to perform a task multiple times but do not know in advance how many iterations will be needed.<br><br>
                     <code>while (condition) {<br>
                         // Code to execute as long as the condition is true<br>
                     }<br>
@@ -135,17 +144,696 @@
                 <summary>Example and explanation</summary>
                 <ul>
                     <li><b>Example </b></li>
-                    <code>int number = 10;<br>
-
-                        if (number > 10) {<br>
-                            std::cout << "The number is greater than 10." << std::endl;<br>
-                        } else if (number == 10) {<br>
-                            std::cout << "The number is exactly 10." << std::endl;<br>
-                        } else {<br>
-                            std::cout << "The number is less than 10." << std::endl;<br>
+                    <code>int counter = 0;<br>
+                        <br>
+                        while (counter < 5) {<br>
+                            std::cout << "Counter: " << counter << std::endl;<br>
+                            counter++;<br>
                         }</code>
                     <li><b>Explanation</b></li>
-                    Here, the program checks if number is greater than 10, exactly 10, or less than 10, and executes the corresponding code block.
+                    In this example, the loop will print the value of <b>'counter'</b> from 0 to 4. If the initial value of <b>'counter'</b> was 5 or more, the loop body would not execute at all.
                 </ul>
             </details>
+            <main> <section class="content-section">
+                <h2>II. 'Do...while' Loop</h2>
+                <details>
+                    <summary>Syntax</summary>
+                    <ul>
+                        <li>The <b>'do...while'</b> loop checks the condition after executing the loop body. This means the loop body will execute at least once, regardless of whether the condition is true initially.</li>
+                        <code>do {<br>
+                            // Code to execute<br>
+                        } while (condition);</code>
+                    </ul>
+        
+        
+                </details>
+                <details>
+                    <summary>Example and explanation</summary>
+                    <ul>
+                        <li><b>Example: </b></li>
+                        <code>int counter = 0;<br>
+                            <br>
+                            do {<br>
+                                std::cout << "Counter: " << counter << std::endl;<br>
+                                counter++;<br>
+                            } while (counter < 5);<br>
+                            </code>
+                        <li><b>Explanation:</b></li>
+                        In this example, the loop will print the value of counter from 0 to 4. Even if the initial value of counter was 5 or more, the loop body would execute once before checking the condition.
+                    </ul>
+                </details>
+                </section>
+            </main>
+            <main> <section class="content-section">
+                <h2>II. Key Difference</h2>
+                <details>
+                    <summary>Condition Check Timing</summary>
+                    <ul>
+                        <li><b>'while' loop</b>: The condition is checked before the loop body is executed.</li>
+                        <li><b>'do...while'</b> loop: The condition is checked after the loop body is executed.</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Execution Guarantee</summary>       
+                    <ul>
+                        <li><b>'while' loop</b>: The loop body may not execute at all if the condition is false initially.</li>
+                        <li><b>'do...while' loop</b>: The loop body is guaranteed to execute at least once.</li>
+                    </ul>             
+                </details>
+                </section>
+            </main>
+            <h2>III. 'For' Loop</h2>
+                <details>
+                    <summary>Syntax</summary>
+                    <ul>
+                        <li>In C++, the <b>'for'</b> loop is a control structure used to execute a block of code a specific number of times. It is particularly useful when the number of iterations is known beforehand. The <b>'for'</b> loop provides a compact way to initialize, test, and increment a counter variable in a single line.<br></li>
+                        <br>
+                        <code>for (initialization; condition; increment) {<br>
+                            // Code to execute<br>
+                        }</code>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Components</summary>
+                    <ul>
+                        <li><b>Initialization</b>: This part is executed once at the beginning of the loop. It is typically used to initialize a counter variable.</li><br>
+                        <li><b>Condition</b>: This expression is evaluated before each iteration. If it evaluates to true, the loop body executes. If it evaluates to false, the loop terminates.</li><br>
+                        <li><b>Increment</b>: This part is executed after each iteration of the loop body. It is usually used to update the counter variable.</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Example and explanation</summary>
+                    <ul>
+                        <li><b>Example: </b></li>
+                        <code>for (int i = 0; i < 5; i++) {<br>
+                            std::cout << "i: " << i << std::endl;<br>
+                        }
+                            </code>
+                            <br>
+                        <b>Explanation:</b><br>
+                        <li>Initialization: 'int i = 0;' initializes the counter variable 'i' to 0.</li>
+                        <li>Condition: 'i < 5' checks if 'i' is less than 5. If true, the loop body executes. If false, the loop terminates.</li>
+                        <li>Increment: 'i++'' increments the counter variable 'i' by 1 after each iteration.</li>
+                    </ul>
+                </details>
+                <main><section class = "content-section">
+                    <h2>Nested 'for' Loops</h2>
+                    <details>
+                        <summary>Syntax</summary>
+                        <ul>
+                            <li>'for' loops can be nested within each other to handle multi-dimensional data structures like matrices.</li>
+                            <li>
+                                <code>
+                                    for (initialization1; condition1; increment1) {<br>
+                                        for (initialization2; condition2; increment2) {<br>
+                                            // Code to execute in the inner loop<br>
+                                        }<br>
+                                        // Code to execute in the outer loop<br>
+                                    }<br>
+                                </code>
+                            </li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Example and Explanation</summary>
+                        <ul>
+                            <li>
+                                <code>
+                                    #include <iostream><br>
+                                        <br>
+                                        int main() {<br>
+                                            int rows = 5;<br>
+                                        <br>
+                                            for (int i = 1; i <= rows; i++) { // Outer loop for rows<br>
+                                                for (int j = 1; j <= i; j++) { // Inner loop for columns<br>
+                                                    std::cout << "* ";<br>
+                                                }<br>
+                                                std::cout << std::endl; // New line after each row<br>
+                                            }<br>
+                                        <br>
+                                            return 0;<br>
+                                        }
+                                </code>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li><b>Explanation</b></li><br>
+                            <b>Outer Loop:</b><br>
+                            <li>'for (int i = 1; i <= rows; i++)'': Iterates over each row from 1 to 'rows'.</li>
+                            <b>Inner Loop:</b><br>
+                            <li>'for (int j = 1; j <= i; j++)': Iterates and prints '*'' for the number of times equal to the current row number.</li>
+                            <b>Code Execution:</b><br>
+                            <li>'std::cout << "* ";': Prints a star followed by a space.</li>
+                            <li>'std::cout << std::endl;': Prints a new line after each row to format the output as a triangle.</li>
+                        </ul>
+                    </details>
+                </section></main>
+                <h1>Exercises and Explanations</h1>
+                <section class = "content-section">
+                    <h2>If Exercises</h2>
+                    <details>  
+                        <summary>Exercise 1: Check If a Number is Even or Odd</summary>
+                        <h4>Problem: Write a program that takes an integer as input and checks if it is even or odd.</h4>
+                    </details>
+                    <details>
+                        <summary>Exercise 2: Find the Largest of Three Numbers</summary>
+                        <h4>Problem: Write a program that takes three integers as input and finds the largest among them.</h4>
+                    </details>
+                    <details>
+                        <summary>Exercise 3: Check If a Character is a Vowel or Consonant</summary>
+                        <h4>Problem: Write a program that takes a character as input and checks if it is a vowel or consonant.</h4>
+                </details>
+                <details>
+                    <summary>Exercise 4: Grade Classification</summary>
+                    <h4>Problem: Write a program that takes a student's score as input and prints their grade based on the following criteria:</h4>
+                    <ul>
+                        <li>90-100: A</li>
+                        <li>80-89: B</li>
+                        <li>70-79: C</li>
+                        <li>60-69: D</li>
+                        <li>Below 60: F</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Exercise 5: Check If a Year is a Leap Year</summary>
+                    <h4>Problem: Write a program that takes a year as input and checks if it is a leap year.</h4>
+                </details>
+                </section>
+                <main><section class = "content-section">
+                    <h2>Answers and Explanation</h2>
+                    <details>
+                        <summary>Exercise 1: Check If a Number is Even or Odd (Answers and Explanation)</summary>
+                        <h4>Answer</h4>
+                        <code>
+                            #include <iostream><br>
+                                <br>
+                                int main() {<br>
+                                    int score;<br>
+                                    std::cout << "Enter the student's score: ";<br>
+                                    std::cin >> score;<br>
+                                    <br>
+                                    if (score >= 90 && score <= 100) {<br>
+                                        std::cout << "Grade: A" << std::endl;<br>
+                                    } else if (score >= 80 && score < 90) {<br>
+                                        std::cout << "Grade: B" << std::endl;<br>
+                                    } else if (score >= 70 && score < 80) {<br>
+                                        std::cout << "Grade: C" << std::endl;<br>
+                                    } else if (score >= 60 && score < 70) {<br>
+                                        std::cout << "Grade: D" << std::endl;<br>
+                                    } else {<br>
+                                        std::cout << "Grade: F" << std::endl;<br>
+                                    }<br>
+                                    <br>
+                                    return 0;<br>
+                                }<br>
+                                
+                        </code>
+                        <h4>Explanation</h4>
+                        <ul>
+                            <li>The program prompts the user to enter a student's score.</li>
+                            <li>It uses <code>'if...else if...else'</code> statements to classify the score into grades.</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Exercise 2: Find the Largest of Three Numbers (Answers and Explanation)</summary>
+                        <h4>Answer</h4>
+                        <code>#include <iostream><br>
+                            <br>
+                            int main() {<br>
+                                int num1, num2, num3;<br>
+                                std::cout << "Enter three integers: ";<br>
+                                std::cin >> num1 >> num2 >> num3;<br>
+                                <br>                        
+                                if (num1 >= num2 && num1 >= num3) {<br>
+                                    std::cout << num1 << " is the largest." << std::endl;<br>
+                                } else if (num2 >= num1 && num2 >= num3) {<br>
+                                    std::cout << num2 << " is the largest." << std::endl;<br>
+                                } else {<br>
+                                    std::cout << num3 << " is the largest." << std::endl;<br>
+                                }<br>
+                            
+                                return 0;<br>
+                            }
+                            </code>
+                            <h4>Explanation</h4>
+                            <ul>
+                                <li>The program prompts the user to enter three integers.</li>
+                                <li>It uses if...else if...else statements to compare the numbers and determine the largest one.</li>
+                                <li>It checks all possible conditions to identify the largest number and prints the result.</li>
+                            </ul>
+                    </details>
+                    <details>
+                        <summary>Exercise 3: Check If a Character is a Vowel or Consonant (Answer and Explanation)</summary>
+                        <h4>Answer:</h4>
+                        <code>
+                            #include <iostream><br>
+
+                                int main() {<br>
+                                    char ch;<br>
+                                    std::cout << "Enter a character: ";<br>
+                                    std::cin >> ch;<br>
+                                <br>
+                                    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||<br>
+                                        ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {<br>
+                                        std::cout << ch << " is a vowel." << std::endl;<br>
+                                    } else {<br>
+                                        std::cout << ch << " is a consonant." << std::endl;<br>
+                                    }<br>
+                                
+                                    return 0;<br>
+                                }                                
+                        </code>
+                        <h4>Explanation:</h4>
+                        <ul>
+                            <li>The program prompts the user to enter a character.</li>
+                            <li>The if statement checks if the character is one of the vowels (both lowercase and uppercase).</li>
+                            <li>If true, it prints that the character is a vowel.</li>
+                            <li>Otherwise, it prints that the character is a consonant.</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Exercise 4: Grade Classification (Answer and Explanation)</summary>
+                        <h4>Answer:</h4>
+                        <code>
+                            #include <iostream><br>
+
+                                int main() {<br>
+                                    int score;<br>
+                                    std::cout << "Enter the student's score: ";<br>
+                                    std::cin >> score;<br>
+                                
+                                    if (score >= 90 && score <= 100) {<br>
+                                        std::cout << "Grade: A" << std::endl;<br>
+                                    } else if (score >= 80 && score < 90) {<br>
+                                        std::cout << "Grade: B" << std::endl;<br>
+                                    } else if (score >= 70 && score < 80) {<br>
+                                        std::cout << "Grade: C" << std::endl;<br>
+                                    } else if (score >= 60 && score < 70) {<br>
+                                        std::cout << "Grade: D" << std::endl;<br>
+                                    } else {<br>
+                                        std::cout << "Grade: F" << std::endl;<br>
+                                    }<br>
+                                
+                                    return 0;<br>
+                                }                                
+                        </code>
+                        <h4>Explanation:</h4>
+                        <ul>
+                            <li>The program prompts the user to enter a student's score.</li>
+                            <li>It uses if...else if...else statements to classify the score into grades.</li>
+                            <li>It checks the range of the score and prints the corresponding grade.</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Exercise 5: Check If a Year is a Leap Year (Answer and Explanation)</summary>
+                        <h4>Answer:</h4>
+                        <code>
+                            #include <iostream><br>
+
+                                int main() {<br>
+                                    int year;<br>
+                                    std::cout << "Enter a year: ";<br>
+                                    std::cin >> year;<br>
+                                
+                                    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {<br>
+                                        std::cout << year << " is a leap year." << std::endl;<br>
+                                    } else {<br>
+                                        std::cout << year << " is not a leap year." << std::endl;<br>
+                                    }<br>
+                                
+                                    return 0;<br>
+                                }                                
+                        </code>
+                        <h4>Explanation:</h4>
+                        <ul>
+                            <li>The program prompts the user to enter a year.</li>
+                            <li>The if statement checks if the year is divisible by 4 but not by 100, or if it is divisible by 400 (leap year conditions).</li>
+                            <li>If true, it prints that the year is a leap year.</li>
+                            <li>Otherwise, it prints that the year is not a leap year.</li>
+                        </ul>
+                    </details>
+                </section></main>
+                <section class="content-section">
+                    <h2>'Do..While' Exercises</h2>
+                    <details>
+                        <summary>Exercise 1: Sum of Natural Numbers Using while Loop</summary>
+                        <h4>Problem: Write a program to calculate the sum of the first n natural numbers using a while loop.</h4>
+                    </details>
+                    <details>
+                        <summary>Exercise 2: Factorial of a Number Using while Loop</summary>
+                        <h4>Problem: Write a program to calculate the factorial of a given number using a while loop.</h4>
+                    </details>
+                    <details>
+                        <summary>Exercise 3: Reverse a Number Using do...while Loop</summary>
+                        <h4>Problem: Write a program to reverse a given number using a do...while loop.</h4>
+                    </details>
+                    <details>
+                        <summary>Exercise 4: Sum of Digits Using do...while Loop</summary>
+                        <h4>Problem: Write a program to calculate the sum of digits of a given number using a do...while loop.</h4>
+                    </details>
+                    <details>
+                        <summary>Exercise 5: Menu-Driven Program Using do...while Loop</summary>
+                        <h4>Problem: Write a menu-driven program that performs different arithmetic operations (addition, subtraction, multiplication, division) until the user chooses to exit.</h4>
+                    </details>
+                </section>
+                <main><section class = "content-section">
+                    <h2>Answers and Explanation</h2>
+                    <details>
+                        <summary>Exercise 1: Sum of Natural Numbers Using while Loop (Answer and Explanation)</summary>
+                        <h4>Answer:</h4>
+                        <code>
+                            #include <iostream><br>
+                                <br>
+                                int main() {<br>
+                                    int n, sum = 0, i = 1;<br>
+                                    std::cout << "Enter a positive integer: ";<br>
+                                    std::cin >> n;<br>
+                                <br>
+                                    while (i <= n) {<br>
+                                        sum += i;<br>
+                                        i++;<br>
+                                    }<br>
+                                <br>
+                                    std::cout << "Sum of the first " << n << " natural numbers is: " << sum << std::endl;<br>
+                                    return 0;<br>
+                                }
+                        </code>
+                        <h4>Explanation:</h4>
+                        <ul>
+                            <li>The program prompts the user to enter a positive integer n.</li>
+                            <li>The while loop iterates from 1 to n, adding each value to sum.</li>
+                            <li>The loop terminates when i exceeds n, and the sum is printed.</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Exercise 2: Factorial of a Number Using while Loop (Answer and Explanation)</summary>
+                        <h4>Answer:</h4>
+                        <code>
+                            #include <iostream><br>
+                                <br>
+                                int main() {<br>
+                                    int n, factorial = 1, i = 1;<br>
+                                    std::cout << "Enter a positive integer: ";<br>
+                                    std::cin >> n;<br>
+                                <br>
+                                    while (i <= n) {<br>
+                                        factorial *= i;<br>
+                                        i++;<br>
+                                    }<br>
+                                <br>
+                                    std::cout << "Factorial of " << n << " is: " << factorial << std::endl;<br>
+                                    return 0;<br>
+                                }<br>
+                        </code>
+                        <h4>Explanation:</h4>
+                        <ul>
+                            <li>The program prompts the user to enter a positive integer n.</li>
+                            <li>The while loop iterates from 1 to n, multiplying each value to factorial.</li>
+                            <li>The loop terminates when i exceeds n, and the factorial is printed.</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Exercise 3: Reverse a Number Using do...while Loop (Answer and Explanation)</summary>
+                        <h4>Answer:</h4>
+                        <code>
+                            #include <iostream><br>
+                                <br>
+                                int main() {<br>
+                                    int number, reverse = 0;<br>
+                                    std::cout << "Enter an integer: ";<br>
+                                    std::cin >> number;<br>
+                                <br>
+                                    int temp = number;<br>
+                                    do {<br>
+                                        int digit = temp % 10;<br>
+                                        reverse = reverse * 10 + digit;<br>
+                                        temp /= 10;<br>
+                                    } while (temp != 0);<br>
+                                <br>
+                                    std::cout << "Reverse of " << number << " is: " << reverse << std::endl;<br>
+                                    return 0;<br>
+                                }<br>
+                                
+                        </code>
+                        <h4>Explanation:</h4>
+                        <ul>
+                            <li>The program prompts the user to enter an integer.</li>
+                            <li>The do...while loop extracts each digit from the number, constructs the reversed number, and continues until all digits are processed.</li>
+                            <li>The loop guarantees at least one execution even if the number is 0.</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Exercise 4: Sum of Digits Using do...while Loop (Answer and Explanation)</summary>
+                        <h4>Answer:</h4>
+                        <code>
+                            #include <iostream><br>
+                                <br>
+                                int main() {<br>
+                                    int number, sum = 0;<br>
+                                    std::cout << "Enter an integer: ";<br<
+                                    std::cin >> number;<br>
+                                <br>
+                                    int temp = number;<br>
+                                    do {<br>
+                                        sum += temp % 10;<br>
+                                        temp /= 10;<br>
+                                    } while (temp != 0);<br>
+                                <br>
+                                    std::cout << "Sum of digits of " << number << " is: " << sum << std::endl;<br>
+                                    return 0;<br>
+                                }                                
+                        </code>
+                        <h4>Explanation:</h4>
+                        <ul>
+                            <li>The program prompts the user to enter an integer.</li>
+                            <li>The do...while loop extracts each digit from the number, adds it to sum, and continues until all digits are processed.</li>
+                            <li>The loop guarantees at least one execution even if the number is 0.</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Exercise 5: Menu-Driven Program Using do...while Loop (Answer and Explanation)</summary>
+                        <h4>Answer:</h4>
+                        <code>
+                            #include <iostream> <br>
+                                <br>
+                                int main() {<br>
+                                    int choice;<br>
+                                    double num1, num2, result;<br>
+                                <br>
+                                    do {<br>
+                                        std::cout << "Menu:\n";<br>
+                                        std::cout << "1. Addition\n";<br>
+                                        std::cout << "2. Subtraction\n";<br>
+                                        std::cout << "3. Multiplication\n";<br>
+                                        std::cout << "4. Division\n";<br>
+                                        std::cout << "5. Exit\n";<br>
+                                        std::cout << "Enter your choice: ";<br>
+                                        std::cin >> choice;<br>
+                                        <br>
+                                        if (choice >= 1 && choice <= 4) {<br>
+                                            std::cout << "Enter two numbers: ";<br>
+                                            std::cin >> num1 >> num2;<br>
+                                        }<br>
+                                <br>
+                                        switch (choice) {<br>
+                                            case 1:<br>
+                                                result = num1 + num2;<br>
+                                                std::cout << "Result: " << result << std::endl;<br>
+                                                break;<br>
+                                            case 2:<br>
+                                                result = num1 - num2;<br>
+                                                std::cout << "Result: " << result << std::endl;<br>
+                                                break;<br>
+                                            case 3:<br>
+                                                result = num1 * num2;<br>
+                                                std::cout << "Result: " << result << std::endl;<br>
+                                                break;<br>
+                                            case 4:<br>
+                                                if (num2 != 0) {<br>
+                                                    result = num1 / num2;<br>
+                                                    std::cout << "Result: " << result << std::endl;<br>
+                                                } else {<br>
+                                                    std::cout << "Error: Division by zero" << std::endl;<br>
+                                                }<br>
+                                                break;<br>
+                                            case 5:<br>
+                                                std::cout << "Exiting..." << std::endl;<br>
+                                                break;<br>
+                                            default:<br>
+                                                std::cout << "Invalid choice. Try again." << std::endl;<br>
+                                                break;<br>
+                                        }<br>
+                                    } while (choice != 5);<br>
+                                <br>
+                                    return 0;<br>
+                                }<br>
+                                
+                        </code>
+                        <h4>Explanation:</h4>
+                        <ul>
+                            <li>The program displays a menu with options for arithmetic operations and exit.</li>
+                            <li>The do...while loop ensures that the menu is displayed at least once and keeps prompting the user for a choice until they choose to exit.</li>
+                            <li>The switch statement handles the different operations based on the user's choice.</li>
+                            <li>For valid operations (choices 1 to 4), the program prompts the user to enter two numbers and performs the chosen operation.</li>
+                            <li>If the user enters 5, the loop terminates, and the program exits.</li>
+                        </ul>
+                    </details>
+                </section></main>
+                <section class="content-section">
+                    <h2>'For' Loop exercises</h2>
+                    <details>
+                        <summary>Exercise 1: Print Numbers from 1 to 10</summary>
+                        <h4>Problem: Write a program to print numbers from 1 to 10 using a for loop.</h4>
+                    </details>
+                    <details>
+                        <summary>Exercise 2: Sum of the First n Natural Numbers</summary>
+                        <h4>Problem: Write a program to calculate the sum of the first n natural numbers using a for loop.</h4>
+                    </details>
+                    <details>
+                        <summary>Exercise 3: Print Multiplication Table</summary>
+                        <h4>Problem: Write a program to print the multiplication table of a given number using a for loop.</h4>
+                    </details>
+                    <details>
+                        <summary>Exercise 4: Find the Factorial of a Number</summary>
+                        <h4>Problem: Write a program to calculate the factorial of a given number using a for loop.</h4>
+                    </details>
+                    <details>
+                        <summary>Exercise 5: Print Fibonacci Series</summary>
+                        <h4>Problem: Write a program to print the first n numbers in the Fibonacci series using a for loop.</h4>
+                    </details>
+                </section>
+                <main><section class="content-section">
+                    <h2>Answers and Explanation</h2>
+                    <details>
+                        <summary>Exercise 1: Print Numbers from 1 to 10 (Answer and Explanation)</summary>
+                        <code>
+                            #include <iostream> <br>
+                                <br>
+                                int main() {<br>
+                                    for (int i = 1; i <= 10; i++) {<br>
+                                        std::cout << i << " ";<br>
+                                    }<br>
+                                    std::cout << std::endl;<br>
+                                    return 0;<br>
+                                }<br>                
+                        </code>
+                        <h4>Explanation:</h4>
+                        <ul>
+                            <li>The for loop initializes i to 1 and increments i by 1 in each iteration until i is greater than 10.</li>
+                            <li>Each value of i is printed followed by a space.</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Exercise 2: Sum of the First n Natural Numbers (Answer and Explanation)</summary>
+                        <h4>Answer:</h4>
+                        <code>
+                            #include <iostream><br>
+                                <br>
+                                int main() {<br>
+                                    int n, sum = 0;<br>
+                                    std::cout << "Enter a positive integer: ";<br>
+                                    std::cin >> n;<br>
+                                <br>
+                                    for (int i = 1; i <= n; i++) {<br>
+                                        sum += i;<br>
+                                    }<br>
+                                <br>
+                                    std::cout << "Sum of the first " << n << " natural numbers is: " << sum << std::endl;<br>
+                                    return 0;<br>
+                                }<br>
+                                
+                        </code>
+                        <h4>Explanation:</h4>
+                        <ul>
+                            <li>The program prompts the user to enter a positive integer n.</li>
+                            <li>The for loop iterates from 1 to n, adding each value to sum.</li>
+                            <li>The sum of the first n natural numbers is printed.</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Exercise 3: Print Multiplication Table (Answer and Explanation)</summary>
+                        <h4>Answer:</h4>
+                        <code>
+                            #include <iostream><br>
+                                <br>
+                                int main() {<br>
+                                    int num;<br>
+                                    std::cout << "Enter an integer: ";<br>
+                                    std::cin >> num;<br>
+                                <br>
+                                    for (int i = 1; i <= 10; i++) {<br>
+                                        std::cout << num << " x " << i << " = " << num * i << std::endl;<br>
+                                    }<br>
+                                <br>
+                                    return 0;<br>
+                                }
+                                
+                        </code>
+                        <h4>Explanation:</h4>
+                        <ul>
+                            <li>The program prompts the user to enter an integer.</li>
+                            <li>The for loop iterates from 1 to 10, multiplying the given number by the loop variable i.</li>
+                            <li>Each result of the multiplication is printed in the format of a multiplication table.</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Exercise 4: Find the Factorial of a Number (Answer and Explanation)</summary>
+                        <h4>Answer:</h4>
+                        <code>
+                            #include <iostream><br>
+                                <br>
+                                int main() {<br>
+                                    int n, factorial = 1;<br>
+                                    std::cout << "Enter a positive integer: ";<br>
+                                    std::cin >> n;<br>
+                                <br>
+                                    for (int i = 1; i <= n; i++){<br>
+                                        factorial *= i;<br>
+                                    }<br>
+                                <br>
+                                    std::cout << "Factorial of " << n << " is: " << factorial << std::endl;<br>
+                                    return 0;<br>
+                                }                                
+                        </code>
+                        <h4>Explanation:</h4>
+                        <ul>
+                            <li>The program prompts the user to enter a positive integer n.</li>
+                            <li>The for loop iterates from 1 to n, multiplying factorial by each value of i.</li>
+                            <li>The factorial of the given number is printed.</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Exercise 5: Print Fibonacci Series (Answer and Explanation)</summary>
+                        <h4>Answer:</h4>
+                        <code>
+                            #include <iostream><br>
+                                <br>
+                                int main() {<br>
+                                    int n, t1 = 0, t2 = 1, nextTerm;<br>
+                                    std::cout << "Enter the number of terms: ";<br>
+                                    std::cin >> n;<br>
+                                <br>
+                                    std::cout << "Fibonacci Series: " << t1 << ", " << t2;<br>
+                                <br>
+                                    for (int i = 1; i <= n - 2; i++) {<br>
+                                        nextTerm = t1 + t2;<br>
+                                        std::cout << ", " << nextTerm;<br>
+                                        t1 = t2;<br>
+                                        t2 = nextTerm;<br>
+                                    }<br>
+                                    std::cout << std::endl;<br>
+                                <br>
+                                    return 0;<br>
+                                }<br>                
+                        </code>
+                        <h4>Explanation:</h4>
+                        <ul>
+                            <li>The program prompts the user to enter the number of terms in the Fibonacci series.</li>
+                            <li>The first two terms (t1 and t2) are initialized to 0 and 1, respectively.</li>
+                            <li>The for loop iterates to generate the next terms of the Fibonacci series, starting from the third term.</li>
+                            <li>Each new term is the sum of the previous two terms, which are then updated for the next iteration.</li>
+                            <li>The series is printed in a comma-separated format.</li>
+                        </ul>
+                    </details>
+                </section></main>
 </body>

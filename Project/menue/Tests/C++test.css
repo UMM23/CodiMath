@@ -16,7 +16,7 @@ nav{
     backdrop-filter: blur(8px);
     color:transparent;
     align-content: center;
-    padding-left: 350px;
+    justify-content: center;
     padding-top:10px;
     font-size:20px;
 }
@@ -82,6 +82,8 @@ h1{
     color:white;
     font-family:"Exo", sans-serif;
     text-align: center;
+    padding-left: -70px;
+    text-justify:distribute-all-lines;
 }
 h2 {
     color: #e8e0e0;
@@ -149,3 +151,81 @@ nav ul .dropdown-content a:hover {
 nav ul .dropdown:hover .dropdown-content {
     display: block;
 }
+form{
+    padding-top:200px;
+    padding-left:235px;
+}
+fieldset{
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top:30px;
+    color:white;
+    border-radius: 20px;
+    border-width: 5px;
+    border-style:solid;
+    border-color:white;
+    width: 1000px;
+    font-family: "Exo", sans-serif;
+}
+label{
+    text-align: left;
+    font-family:"Exo", sans-serif;
+    text-justify: distribute-all-lines;
+    padding-left:20px;
+    font-weight:700;
+    font-size:x-large
+}
+label h4{
+    font-weight:lighter;
+    padding-left:30px;
+}
+input{
+    border-style: dashed;
+    border-color:white;
+    padding-left:40px;
+    width:20px;
+    height:20px;
+}
+textarea{
+    width:500px;
+    height:200px;
+    border-radius: 20px;
+    padding-top:20px ;
+    padding-left:10px;
+}
+button{
+    font-family: "Exo", sans-serif;
+    width: 200px;
+    padding:15px;
+    margin:20px 5px;
+    text-align:center;
+    border-radius:25px;
+    color:black;
+    border:2px;
+    font-size: 20px;
+    cursor:pointer;
+    font-weight:400;
+  }
+  button:hover{
+    background-color:rgba(23, 42, 93, 0.463);
+    transition:0.5s;
+  }
+  button:hover{
+    color:white;
+  }
+  nav .nav{
+    display:flex;
+    color:transparent;
+    align-content: center;
+    padding-left: 350px;
+    padding-top:0px;
+    font-size:20px;
+}
+.content{
+    width: 100%;
+    position:sticky;
+    color:white;
+    top:45%;
+    transform: translateY(-50%);
+    text-align:center;
+  }
