@@ -172,3 +172,8 @@ nav ul .dropdown:hover .dropdown-content {
 ol {
     margin: 5px;
 }
+h1{
+    color:white;
+    font-family:"Exo", sans-serif;
+    text-align: center;
+}
