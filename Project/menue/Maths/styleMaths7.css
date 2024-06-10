@@ -184,5 +184,14 @@ margin: 0px;
 }
 
 ol {
+<<<<<<< HEAD
+    margin: 5px;
+}
+h1{
+    color:white;
+    font-family:"Exo", sans-serif;
+    text-align: center;
+=======
 margin: 5px;
+>>>>>>> 1a10793230be2889a1e0c0777e3ae626d173cf51
 }
