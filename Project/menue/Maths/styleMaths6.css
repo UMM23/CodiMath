@@ -176,6 +176,7 @@ margin: 10px;
 
 .box1 {
 background-color: rgb(235, 233, 233);
+color: black;
 width: fit-content;
 border: 10px solid rgb(0, 28, 128);
 padding: 20px;
