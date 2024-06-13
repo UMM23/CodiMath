@@ -8,12 +8,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,900;1,900&family=Exo:ital,wght@0,484;1,484&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styleMaths6.css">
-    <link rel="website icon" type="png" href="logo.png">
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        .exercise {
+            background-color: #f0f0f0; 
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .exercise h3 {
+            font-size: 1.4em;
+            color: #333;
+        }
+        .exercise p {
+            font-size: 1.2em;
+            color: #333;
+        }
+        .exercise .answer {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
     <nav>
-        <ul class="uniquifier">
-            <li><img src="logo.png" alt="Logo" width="100px" height="30px" class="justify"></li>
+        <ul>
+            <li><img src="logo.png" alt="Logo" width="100px" height="30px"></li>
             <li><a href="../index.html">Menu</a></li>
             <li class="dropdown">
                 <a href="#" class="dropbtn">Maths</a>
@@ -39,86 +60,122 @@
     <main>
         <h1>Theory</h1>
         <section class="content-section">
-            <h2>I. Variables and Constants</h2>
-            <details>
-                <summary>Variables</summary>
-                <p>In mathematics, variables are symbols used to represent unspecified numbers or values. They can take on different values and are often denoted by letters such as x, y, or z.</p>
-            </details>
-            <details>
-                <summary>Constants</summary>
-                <p>Constants are quantities with fixed values that do not change. They are often denoted by letters or numbers and can include fundamental constants such as π.</p>
-            </details>
-            <details>
-                <summary>Parameters</summary>
-                <p>Parameters are variables that take on specific values depending on the context of a problem. They are denoted by letters and can represent constant values under certain conditions.</p>
-            </details>
-        </section>
-        <section class="content-section">
-            <h2>II. Rational Expressions</h2>
+            <h2>Rectangular Coordinate System</h2>
             <details>
                 <summary>Definition</summary>
-                <p>A rational expression is an algebraic expression made up of numbers, variables, and arithmetic operations (addition, subtraction, multiplication, division). It may include variables in the denominator of fractions.</p>
+                <ul>
+                    <li>Two perpendicular number axes that have a common origin and the same unit segment.</li>
+                </ul>
             </details>
             <details>
-                <summary>Whole Rational Expression</summary>
-                <p>A whole rational expression is a rational expression where there is no division by a variable.</p>
+                <summary>Coordinates of a Point</summary>
+                <ul>
+                    <li><b>Definition</b> - The location of an arbitrary point A (x<sub>A</sub>; y<sub>A</sub>) relative to the drawn coordinate system is determined by the numbers x<sub>A</sub> and y<sub>A</sub>. These numbers are called the coordinates of the point.</li>
+                    <ul>
+                        <li>abscissa – x<sub>A</sub> is called the abscissa of point A.</li>
+                        <li>ordinate – y<sub>A</sub> is called the ordinate of point A.</li>
+                    </ul>
+                </ul>
+            </details>
+            <h2>Geometric Solids</h2>
+            <details>
+                <summary>Prisms</summary>
+                <ul>
+                    <li><b>Definition</b> - A prism is a solid object with two identical ends and flat sides. The sides are parallelograms, and the cross section along the length is the same all the way through.</li>
+                    <li><b>Lateral Surface Area</b> - For a right prism, the lateral surface area is the sum of the areas of the lateral faces, which are rectangles. The formula is \( S = P \cdot h \), where \( P \) is the perimeter of the base and \( h \) is the height.</li>
+                    <li><b>Total Surface Area</b> - The total surface area of a right prism is the sum of the lateral surface area and the areas of the two bases. The formula is \( S_{total} = S + 2B \), where \( B \) is the area of one base.</li>
+                    <li><b>Volume</b> - The volume of a right prism is the product of the base area and the height. The formula is \( V = B \cdot h \). For a rectangular prism (parallelepiped), \( V = a \cdot b \cdot c \), where \( a \), \( b \), and \( c \) are the dimensions of the rectangle. For a cube, \( V = a^3 \), where \( a \) is the side length.</li>
+                    <li><b>Examples</b>:
+                        <ul>
+                            <li>For a triangular prism with a base area of 10 cm² and height of 5 cm, the volume is \( V = 10 \cdot 5 = 50 \) cm³.</li>
+                            <li>For a rectangular prism with dimensions 3 cm, 4 cm, and 5 cm, the volume is \( V = 3 \cdot 4 \cdot 5 = 60 \) cm³.</li>
+                        </ul>
+                    </li>
+                </ul>
             </details>
             <details>
-                <summary>Fractional Rational Expression</summary>
-                <p>A rational expression is a fraction in which both the numerator and the denominator are polynomials. For example, (3x + 2)/(x - 1) is a rational expression.</p>
+                <summary>Pyramids</summary>
+                <ul>
+                    <li><b>Definition</b> - A pyramid is a solid with a polygonal base and triangular faces that converge at a point (the apex). A regular pyramid has a base that is a regular polygon and faces that are congruent triangles.</li>
+                    <li><b>Lateral Surface Area</b> - The lateral surface area of a regular pyramid is calculated using the formula \( S = \frac{1}{2} \cdot P \cdot k \), where \( P \) is the perimeter of the base and \( k \) is the slant height.</li>
+                    <li><b>Total Surface Area</b> - The total surface area of a regular pyramid includes the lateral surface area and the base area. The formula is \( S_{total} = S + B \), where \( B \) is the area of the base.</li>
+                    <li><b>Volume</b> - The volume of a regular pyramid is given by \( V = \frac{1}{3} \cdot B \cdot h \), where \( B \) is the base area and \( h \) is the height (the perpendicular distance from the base to the apex).</li>
+                    <li><b>Examples</b>:
+                        <ul>
+                            <li>For a square pyramid with a base side length of 4 cm and height of 6 cm, the base area is \( B = 4^2 = 16 \) cm², and the volume is \( V = \frac{1}{3} \cdot 16 \cdot 6 = 32 \) cm³.</li>
+                        </ul>
+                    </li>
+                </ul>
             </details>
             <details>
-                <summary>Numeric Value of an Expression</summary>
-                <p>The numeric value of an expression is obtained by replacing the variables with given rational numbers and evaluating the expression.</p>
+                <summary>Cylinders</summary>
+                <ul>
+                    <li><b>Definition</b> - A cylinder is a solid object with two parallel circular bases connected by a curved surface at a fixed distance. A right circular cylinder has bases aligned one directly above the other.</li>
+                    <li><b>Lateral Surface Area</b> - The lateral surface area of a cylinder is the area of the curved surface. The formula is \( S = 2\pi rh \), where \( r \) is the radius of the base and \( h \) is the height.</li>
+                    <li><b>Total Surface Area</b> - The total surface area of a cylinder includes the lateral surface area and the areas of the two bases. The formula is \( S_{total} = 2\pi rh + 2\pi r^2 \).</li>
+                    <li><b>Volume</b> - The volume of a cylinder is the product of the base area and the height. The formula is \( V = \pi r^2 h \).</li>
+                    <li><b>Examples</b>:
+                        <ul>
+                            <li>For a cylinder with a base radius of 3 cm and height of 7 cm, the volume is \( V = \pi \cdot3^2 \cdot 7 = 63\pi \) cm³.</li>
+                        </ul>
+                    </li>
+                </ul>
             </details>
+
+            <h2>Additional Topics</h2>
+            
             <details>
-                <summary>Allowable Values</summary>
-                <p>Allowable values refer to the values that the lettered quantities in a rational expression can take. They may be restricted by conditions such as avoiding division by zero.</p>
+                <summary>Fractions</summary>
+                <ul>
+                    <li><b>Addition and Subtraction</b> - Operations involving fractions, such as \( \frac{3}{4} + \frac{1}{2} \).</li>
+                    <li><b>Multiplication and Division</b> - Multiplying and dividing fractions, e.g., \( \frac{2}{3} \times \frac{5}{6} \).</li>
+                </ul>
             </details>
+            
+            <details>
+                <summary>Decimals</summary>
+                <ul>
+                    <li><b>Decimal Operations</b> - Performing operations with decimals, e.g., \( 2.5 \times 1.2 \).</li>
+                    <li><b>Decimal to Fraction Conversion</b> - Converting decimals to fractions, e.g., \( 0.75 = \frac{3}{4} \).</li>
+                </ul>
+            </details>
+            
+            <h2>Exercises</h2>
+            
+            <div class="exercise">
+                <h3>Exercise 1: Fractions</h3>
+                <p>Simplify the following fraction: \( \frac{12}{36} \).</p>
+                <div class="answer">
+                    <p>Answer: \( \frac{1}{3} \).</p>
+                </div>
+            </div>
+            
+            <div class="exercise">
+                <h3>Exercise 2: Decimals</h3>
+                <p>Perform the following operation: \( 3.5 + 1.25 \).</p>
+                <div class="answer">
+                    <p>Answer: \( 4.75 \).</p>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 3: Cylinder Calculation</h3>
+                <p>Calculate the lateral surface area of a cylinder with radius \( r = 4 \) cm and height \( h = 10 \) cm.</p>
+                <div class="answer">
+                    <p>Answer: \( S = 2\pi \cdot 4 \cdot 10 = 80\pi \) cm².</p>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>Exercise 4: Volume of a Prism</h3>
+                <p>Find the volume of a right prism with a triangular base, where the base area \( B = 36 \) cm² and height \( h = 8 \) cm.</p>
+                <div class="answer">
+                    <p>Answer: \( V = B \cdot h = 36 \cdot 8 = 288 \) cm³.</p>
+                </div>
+            </div>
+
         </section>
-        <section class="content-section">
-            <h2>III. Monomials</h2>
-            <details>
-                <summary>Definition</summary>
-                <p>A monomial is a single term algebraic expression. For example, 5x, -3y, and 7 are all monomials.</p>
-            </details>
-            <details>
-                <summary>Normal Form of a Monomial</summary>
-                <p>The normal form of a monomial is the standard way of writing it with the coefficient first followed by the variables in alphabetical order. For example, 3x^2y is in normal form.</p>
-            </details>
-            <details>
-                <summary>Coefficient of a Monomial</summary>
-                <p>The coefficient of a monomial is the numerical factor. For example, in the monomial 7x^2, 7 is the coefficient.</p>
-            </details>
-            <details>
-                <summary>Power of a Monomial</summary>
-                <p>The power of a monomial is the sum of the exponents of all the variables. For example, in 4x^3y^2, the power is 3 + 2 = 5.</p>
-            </details>
-            <details>
-                <summary>Similar Monomials</summary>
-                <p>Similar monomials have the same variables raised to the same powers. For example, 5x^2 and -3x^2 are similar monomials.</p>
-            </details>
-        </section>
-        <section class="content-section">
-            <h2>IV. Polynomials</h2>
-            <details>
-                <summary>Definition</summary>
-                <p>A polynomial is an algebraic expression made up of two or more monomials. For example, 3x^2 + 2x - 5 is a polynomial.</p>
-            </details>
-            <details>
-            <summary>Normal Form of a Polynomial</summary>
-            <p>The normal form of a polynomial is the standard way of writing it with the terms in descending order of their degrees. For example, x^3 + 2x^2 - x + 5 is in normal form.</p>
-        </details>
-        <details>
-            <summary>Coefficients of a Polynomial</summary>
-            <p>The coefficients of a polynomial are the numerical factors of each term. For example, in the polynomial 4x^2 + 3x - 7, the coefficients are 4, 3, and -7.</p>
-        </details>
-        <details>
-            <summary>Degree of a Polynomial</summary>
-            <p>The degree of a polynomial is the highest power of the variable in the polynomial. For example, the degree of 5x^3 + 4x^2 - 2 is 3.</p>
-        </details>
-    </section>
-</main>
+    </main>
 </body>
 </html>
 
