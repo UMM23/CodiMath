@@ -16,7 +16,6 @@ nav a ul li,
 .dropbtn {
 color: white;
 transition: transform 0.3s;
-background-color: rgba(0, 0, 0, 0.614);
 }
 
 nav {
@@ -176,6 +175,7 @@ margin: 10px;
 
 .box1 {
 background-color: rgb(235, 233, 233);
+color: black;
 width: fit-content;
 border: 10px solid rgb(0, 28, 128);
 padding: 20px;
