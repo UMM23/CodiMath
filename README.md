@@ -15,7 +15,7 @@
 
 ## <img align="center" src="https://cdn-icons-png.flaticon.com/512/3396/3396255.png" width="30">   Documents
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/512px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png?20210821050414" width="20">  [Presentation](https://eu.docworkspace.com/d/sIKvI55yFApGswrMG)
-- <img src="https://findicons.com/files/icons/2795/office_2013_hd/2000/word.png" width="20"> [Documentation](https://codingburgas-my.sharepoint.com/:b:/g/personal/innedkova21_codingburgas_bg/EWc2Q3_qSilMnoJAFEszCXEBfCuGixFBLDkLIjIA9WNqMw?e=wEUn89)
+- <img src="https://findicons.com/files/icons/2795/office_2013_hd/2000/word.png" width="20"> [Documentation]([https://1drv.ms/w/s!Av5hsa_h2Epnlig_Kxh4IpoE_jDk?e=bVWpTA))
 
 
 ## <img align="center" src="https://cdn-icons-png.flaticon.com/512/2620/2620993.png" width="30"> Used technologies
