@@ -2,7 +2,7 @@
 
 ## <img align="center" src="https://cdn-icons-png.freepik.com/512/5320/5320532.png" width="30"> About
 <p>
-   Our idea is to create a site where people can learn basics of MAth and C++ without having to pay.
+   Our idea is to create a site where people can learn basics of Math and C++ without having to pay.
 </p>
 
 
